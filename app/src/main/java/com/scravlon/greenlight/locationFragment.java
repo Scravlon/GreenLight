@@ -8,8 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 
 /**
@@ -20,7 +25,10 @@ import com.google.android.gms.maps.MapView;
  * Use the {@link locationFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class locationFragment extends Fragment{
+public class locationFragment extends Fragment implements OnMapReadyCallback {
+    private static final String MAP_VIEW_BUNDLE_KEY = "MapViewBundleKey";
+    private MapView mapView;
+    private GoogleMap gmap;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -70,8 +78,17 @@ public class locationFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_location, container, false);
+        Bundle mapViewBundle = null;
+        if (savedInstanceState != null) {
+            mapViewBundle = savedInstanceState.getBundle(MAP_VIEW_BUNDLE_KEY);
+        }
+
+        mapView = (MapView) v.findViewById(R.id.mapView);
+        mapView.onCreate(mapViewBundle);
+        mapView.getMapAsync(this);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_location, container, false);
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -98,6 +115,25 @@ public class locationFragment extends Fragment{
         mListener = null;
     }
 
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        gmap = googleMap;
+        gmap.setMinZoomPreference(10);
+        LatLng ny = new LatLng(43.0004075, -78.7865803);
+        gmap.moveCamera(CameraUpdateFactory.newLatLng(ny));
+
+        LatLng firstMachine = new LatLng(42.980843, -78.8089263);
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(firstMachine);
+        gmap.addMarker(markerOptions);
+
+        LatLng secondMachine = new LatLng(42.9906232, -78.7923501);
+        MarkerOptions markerOptions2 = new MarkerOptions();
+        markerOptions2.position(secondMachine);
+        markerOptions2.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        gmap.addMarker(markerOptions2);
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -111,5 +147,29 @@ public class locationFragment extends Fragment{
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mapView.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mapView.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mapView.onDestroy();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        mapView.onSaveInstanceState(outState);
     }
 }

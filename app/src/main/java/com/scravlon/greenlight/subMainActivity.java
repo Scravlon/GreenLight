@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 
-public class subMainActivity extends AppCompatActivity implements homeFragment.OnFragmentInteractionListener, qrFragment.OnFragmentInteractionListener, locationFragment.OnFragmentInteractionListener
+public class subMainActivity extends FragmentActivity implements homeFragment.OnFragmentInteractionListener, qrFragment.OnFragmentInteractionListener, locationFragment.OnFragmentInteractionListener
 , educationFragment.OnFragmentInteractionListener, moneyFragment.OnFragmentInteractionListener {
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -31,6 +32,7 @@ public class subMainActivity extends AppCompatActivity implements homeFragment.O
                     break;
                 case R.id.navigation_location:
                     fragment = new locationFragment();
+
                     break;
                 case R.id.navigation_education:
                     fragment = new educationFragment();
@@ -69,4 +71,5 @@ public class subMainActivity extends AppCompatActivity implements homeFragment.O
     public void onFragmentInteraction(Uri uri) {
 
     }
+
 }
