@@ -5,10 +5,46 @@
     android:layout_height="match_parent"
     tools:context=".moneyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
+        <Button
+            android:id="@+id/but_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:ems="15"
+            android:text="Green Light Dollar" />
+
+        <Button
+            android:id="@+id/but_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:ems="15"
+            android:text="History" />
+
+        <Button
+            android:id="@+id/but_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:ems="15"
+            android:text="Transfer to Bank" />
+
+        <Button
+            android:id="@+id/but_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:ems="15"
+            android:text="Print vouncher" />
+    </LinearLayout>
 </FrameLayout>
