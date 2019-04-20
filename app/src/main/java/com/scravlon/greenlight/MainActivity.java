@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 String usernumber = editnumber.getText().toString();
                 String userpass = editpass.getText().toString();
                 if(usernumber.equals(loginNumber) && userpass.equals(password)){
+                    Toast.makeText(MainActivity.this, "Welcome Bryan!", Toast.LENGTH_SHORT).show();
                     changeIntent();
                 } else{
                     Toast.makeText(MainActivity.this, "Wrong credential!", Toast.LENGTH_SHORT).show();
