@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Request the location service from the user, required Android 6.0 and higher
+     * Request the location service from the user, required Android a6.0 and higher
      *
      * Reference: https://developer.android.com/training/permissions/requesting
      */

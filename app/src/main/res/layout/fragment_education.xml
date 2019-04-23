@@ -1,14 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".educationFragment">
+    tools:context=".educationFragment"
+    android:background="#FFFFFF">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/text_edu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Education:"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/im1"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a1" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="GLASS\nColored &amp; clear glass\nBEER, SODA, WINE &amp; LIQUOR BOTTLES\nJARS(EMPTY ONLY)"
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/im2"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a2" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="METAL\nMetal cans &amp; cookware\nALUMINUM CANS\nMETAL POTS &amp; PANS\nTINS\nUTENSILS\nSTEEL &amp; TIN CANS(EMPTY ONLY)"
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/im3"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a3" />
+
+            <TextView
+                android:id="@+id/tx3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="PLASTIC\nAll plastic, numbers 1-7\nBOTTLES, CONTAINERS,TUBS &amp; LIDS\nLAWN FURNITURE\nLAUNDRY BASKETS\n5-GALLON BUCKETS\nSODA CRATES\nGARBAGE BINS(EMPTY ONLY)"
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/im4"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a4" />
+
+            <TextView
+                android:id="@+id/tx4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="PAPER\nPaperboard, non-waxed\nSCRAP PAPER\nJUNK MAIL\nNEWSPAPERS\nPHONE BOOKS \nMAGAZINES\nMILK &amp;JUICE CONTAINERS (EMPTY &amp; RINSED)\nPAPER TOWEL &amp; TOILET PAPER CARDBOARD ROLL\nCARDBOARD &amp; PIZZA BOXES (NO FOOD WASTE)"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/im5"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a5" />
+
+            <TextView
+                android:id="@+id/tx5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="ELECTRONIC WASTE, FLUORESCENT &amp; LED LIGHT BULBS\nNo curbside collection, unless special arrangements are made. Drop off your used electronics, cords, and LED and fluorescent light bulbs to 1120 Seneca St., Buffalo. LED and fluorescent light bulbs can also be taken to your local home improvement store.\nNO BROKEN TVS OR COMPUTERS ACCEPTED. CALL 311 OR VISITBUFFALORECYCLES.ORG FOR A COMPLETE LIST OF ACCEPTED ELECTRONICS."
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/im6"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a6" />
+
+            <TextView
+                android:id="@+id/tx6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="GARBAGE\nFOOD WASTE\nTAKEOUT CONTAINERS\nWRAPPING PAPER\nGARDEN HOSES"
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/im7"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a7" />
+
+            <TextView
+                android:id="@+id/tx7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="COAT HANGERS\nCoat hangers cannot be recycled. Donate to your local dry cleaneror put them in the blue garbage tote."
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/im8"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a8" />
+
+            <TextView
+                android:id="@+id/tx8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="HOUSEHOLD HAZARDOUS WASTE (HHW)\nThe City of Buffalo and ErieCounty sponsor HHW collections for items including household cleaners, pesticides, fertilizers,pool chemicals, oil and acrylic-based paints, propane tanks and batteries.\nCALL 311 OR VISIT BUFFALORECYCLES.ORG FOR A LIST OF DROP-OFF DATES."
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/im9"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a9" />
+
+            <TextView
+                android:id="@+id/tx9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="“WET STRENGTH” PAPER, INCLUDING FRIDGE, FREEZER AND SODA/BEER PACKAGING"
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/im10"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a10" />
+
+            <TextView
+                android:id="@+id/tx10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="CLOTHING&amp; FURNITURE\nDrop off gently used clothing and furniture at your local donation center.\nCALL 311 OR VISIT BUFFALORECYCLES.ORGFOR A LIST OF DONATION CENTERS."
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/im12"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a12" />
+
+            <TextView
+                android:id="@+id/tx12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="LATEX PAINT &amp; CANS(DRIED OUT)\nINCANDESCENTLIGHT BULBS\nPAPER TOWELS,TISSUES &amp; NAPKINS"
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/im13"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a13" />
+
+            <TextView
+                android:id="@+id/tx13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="PLASTIC BAGS\nBring your plastic bags to the grocery store for easy drop-off.Look for drop-off bins in the frontof the store."
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/im14"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a14" />
+
+            <TextView
+                android:id="@+id/tx14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="STYROFOAM\nPlace clean, white Styrofoam(no packing peanuts) in clearbags and bring to Thermal Foams, 2102 Kenmore Ave., Buffalo, 874.6474. Call first to make an appointment!"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/im16"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a16" />
+
+            <TextView
+                android:id="@+id/tx16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="TIRES\nNo curbside collection. Drop off your tires at the Broadway Garage, 197 Broadway St., Buffalo.\nCALL 311 OR VISIT BUFFALORECYCLES.ORG FOR A LIST OF DROP OFF DATES."
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/im17"
+                android:layout_width="224dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:src="@drawable/a17" />
+
+            <TextView
+                android:id="@+id/tx17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="YARD WASTE &amp; CHRISTMAS TREES\nPut your leaves in clear bags, and bundle your branches and sticks. Christmas trees will be collected and turned into compost.\nCALL 311 OR VISIT BUFFALORECYCLES.ORGFOR YOUR COLLECTION DATES OR DROP OFF AT DPW ENGINEERING GARAGE, 1120 SENECA, ST., BUFFALO."
+                android:textSize="12sp" />
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

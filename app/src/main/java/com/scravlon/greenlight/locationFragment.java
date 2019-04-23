@@ -12,6 +12,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -49,8 +50,8 @@ public class locationFragment extends Fragment implements OnMapReadyCallback {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     * @param param1 Parameter a1.
+     * @param param2 Parameter a2.
      * @return A new instance of fragment locationFragment.
      */
     // TODO: Rename and change types and number of parameters
@@ -119,19 +120,57 @@ public class locationFragment extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         gmap = googleMap;
         gmap.setMinZoomPreference(10);
-        LatLng ny = new LatLng(43.0004075, -78.7865803);
+        LatLng ny = new LatLng(42.8919625, -78.8654158);
         gmap.moveCamera(CameraUpdateFactory.newLatLng(ny));
 
+        //Moura New York Style Deli
         LatLng firstMachine = new LatLng(42.980843, -78.8089263);
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(firstMachine);
         gmap.addMarker(markerOptions);
-
-        LatLng secondMachine = new LatLng(42.9906232, -78.7923501);
+        //Mayor office
+        LatLng secondMachine = new LatLng(42.89527210009785, -78.84615787538661);
         MarkerOptions markerOptions2 = new MarkerOptions();
         markerOptions2.position(secondMachine);
         markerOptions2.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
         gmap.addMarker(markerOptions2);
+        //Greyhound Bus Station
+        LatLng secondMachine1 = new LatLng(42.883241, -78.872147);
+        MarkerOptions markerOptions21 = new MarkerOptions();
+        markerOptions21.position(secondMachine1);
+        gmap.addMarker(markerOptions21);
+        //Buffalo Niagara International Airport
+        LatLng secondMachine2 = new LatLng(42.934401, -78.731873);
+        MarkerOptions markerOptions22 = new MarkerOptions();
+        markerOptions22.position(secondMachine2);
+        gmap.addMarker(markerOptions22);
+        //42.934401, -78.731873
+
+        //Abbott Road Plaza
+        //42.886074, -78.874728
+        LatLng secondAbbot = new LatLng(42.831360, -78.805505);
+        MarkerOptions secondAbbotMarker = new MarkerOptions();
+        secondAbbotMarker.position(secondAbbot);
+        gmap.addMarker(secondAbbotMarker);
+
+        LatLng sec12 = new LatLng(42.886074, -78.874728);
+        MarkerOptions mko2 = new MarkerOptions();
+        mko2.position(sec12);
+        mko2.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+        gmap.addMarker(mko2);
+
+        LatLng as1 = new LatLng(42.901436, -78.868948);
+        MarkerOptions sa1 = new MarkerOptions();
+        sa1.position(as1);
+        gmap.addMarker(sa1);
+
+        LatLng sec122 = new LatLng(42.892527, -78.837772);
+        MarkerOptions mko22 = new MarkerOptions();
+        mko22.position(sec122);
+        mko22.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+        gmap.addMarker(mko22);
+
+
     }
 
     /**

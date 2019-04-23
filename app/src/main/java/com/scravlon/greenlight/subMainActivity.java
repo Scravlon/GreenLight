@@ -61,7 +61,7 @@ public class subMainActivity extends FragmentActivity implements homeFragment.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_main);
 
-        loadFragment(new homeFragment());
+        loadFragment(new qrFragment());
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);

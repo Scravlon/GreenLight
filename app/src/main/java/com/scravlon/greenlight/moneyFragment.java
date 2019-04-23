@@ -1,12 +1,16 @@
 package com.scravlon.greenlight;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 /**
@@ -37,8 +41,8 @@ public class moneyFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     * @param param1 Parameter a1.
+     * @param param2 Parameter a2.
      * @return A new instance of fragment moneyFragment.
      */
     // TODO: Rename and change types and number of parameters
@@ -64,7 +68,48 @@ public class moneyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_money, container, false);
+        View v = inflater.inflate(R.layout.fragment_money, container, false);
+        Button but_green = v.findViewById(R.id.but_green);
+        Button but_bank = v.findViewById(R.id.but_bank);
+        Button but_print = v.findViewById(R.id.but_print);
+        Button but_history = v.findViewById(R.id.but_history);
+        but_print.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "Printing voucher!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        but_bank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setMessage("Balance transfer to bank!").setTitle("Transfer to Bank");
+                alertDialog.setPositiveButton("Done", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                });
+                AlertDialog dialog = alertDialog.create();
+                dialog.show();
+            }
+        });
+        but_history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setMessage("Tin can: 49\nBottles: 12\nCardboard: 3 lbs.").setTitle("Recycle history");
+                alertDialog.setPositiveButton("Done", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                });
+                AlertDialog dialog = alertDialog.create();
+                dialog.show();
+            }
+        });
+
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
